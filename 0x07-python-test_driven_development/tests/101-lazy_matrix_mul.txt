@@ -1,0 +1,101 @@
+==========================
+The ``matrix_mul`` module
+==========================
+
+Using ``matrix_mul``
+---------------------
+
+Import the function:
+
+    >>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Now test it:
+
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+
+    >>> print(matrix_mul([[1, 2]], [[3.0, 4], [5, 6.0]]))
+    [[13. 16.]]
+
+    >>> print(matrix_mul([[1, -2], [-5, 6]], [[2, 3], [4, -7]]))
+    [[ -6  17]
+     [ 14 -57]]
+
+    >>> matrix_mul([[1, 2]], 9)
+    Traceback (most recent call last):
+    ValueError: Scalar operands are not allowed, use '*' instead
+>>> matrix_mul([[1, 2]], 9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: Scalar operands are not allowed, use '*' instead
+>>> matrix_mul("Hello", [[1, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: Scalar operands are not allowed, use '*' instead
+>>> matrix_mul(["Betty", "Holberton"], [[1, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: shapes (2,) and (1,2) not aligned: 2 (dim 0) != 1 (dim 0)
+>>> matrix_mul([[1, 2]], ["Betty", "Holberton"])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+TypeError: invalid data type for einsum
+>>> matrix_mul([], [[9, 4]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: shapes (0,) and (1,2) not aligned: 0 (dim 0) != 1 (dim 0)
+>>> matrix_mul([[9, 4]], [[]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: shapes (1,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+>>> matrix_mul([[1, 2], ["Hello", 9]], [[9, 4], [2, 5]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+TypeError: invalid data type for einsum
+>>> matrix_mul([[9, 4], [2, 5]], [[1, 2], ["Hello", 9]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+TypeError: invalid data type for einsum
+>>> matrix_mul([[9, 4], [2]], [[1, 2], [4, 9]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: setting an array element with a sequence.
+>>> matrix_mul([[9, 4], [2, 7.0]], [[1], [4, 9]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: setting an array element with a sequence.
+>>> matrix_mul([[9, 4, 4], [2, 8, 2]], [[1, 2], [4, 9]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 15, in lazy_matrix_mul
+    return numpy.matmul(m_a, m_b)
+ValueError: shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+>>> matrix_mul([[9, 4, 4], [2, 8, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+>>> matrix_mul()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'

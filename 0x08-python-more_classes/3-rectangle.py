@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    """This is the rectangle class"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -34,6 +35,7 @@ class Rectangle:
     @height.setter
     def height(self, val):
         """Setter function of the height property"""
+        print("height set")
         if not isinstance(val, int):
             raise TypeError("height must be an integer")
         if val < 0:

@@ -23,7 +23,7 @@ class Rectangle:
         return rect[:-1]
     
     def __repr__(self):
-        return f"Rectangle()"
+        return f"Rectangle({self.__width},{self.__height})"
 
     def __del__(self):
         """Called when del is detected"""

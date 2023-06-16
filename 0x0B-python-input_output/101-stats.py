@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module is contains soln to stats program"""
+
 import sys
 
 

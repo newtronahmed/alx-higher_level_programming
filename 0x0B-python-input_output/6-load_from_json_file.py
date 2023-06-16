@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import json
 """This module contains load from json file function"""
+
+import json
 
 
 def load_from_json_file(filename):

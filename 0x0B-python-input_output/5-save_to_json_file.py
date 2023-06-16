@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import json 
 """This module contains a function to save to json"""
+
+import json 
 
 
 def save_to_json_file(my_obj, filename):

@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""This module contains add item function """
+
 import sys
 
-"""This module contains add item function """
 
 
 if __name__ =="__main__":

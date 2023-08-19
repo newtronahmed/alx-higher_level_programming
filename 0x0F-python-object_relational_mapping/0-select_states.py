@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""List states in the databse"""
+"""List states in the database"""
 
 if __name__ == "__main__":
 

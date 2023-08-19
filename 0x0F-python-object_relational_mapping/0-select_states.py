@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """List states in the databse"""
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
     import MySQLdb
     import sys

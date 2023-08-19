@@ -14,5 +14,5 @@ if __name__ == "__main__":
     c.execute("SELECT * FROM states WHERE states.name LIKE BINARY '{}'\
               ORDER BY states.id".format(sys.argv[4]))
 
-    for row in c.fetchall()
+    for row in c.fetchall():
         print(row)

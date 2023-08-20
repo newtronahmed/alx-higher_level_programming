@@ -2,7 +2,7 @@
 """prints the first State object from the database"""
 
 if __name__ == "__main__":
-    
+
     import sys
     from sqlalchemy.orm import sessionmaker
     from sqlalchemy import create_engine

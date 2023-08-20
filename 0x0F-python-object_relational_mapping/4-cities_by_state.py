@@ -10,8 +10,9 @@ if __name__ == "__main__":
                          password=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
 
-    c.execute("SELECT * FROM cities LEFT JOIN states ON cities.state_id=states.id\
-            ORDER BY cities.id ASC")
+    c.execute("SELECT * FROM cities LEFT JOIN states ON\
+              cities.state_id=states.id\
+              ORDER BY cities.id ASC")
 
     for row in c.fetchall():
         print(row)

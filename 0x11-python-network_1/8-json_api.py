@@ -3,7 +3,7 @@
 http://0.0.0.0:5000/search_user with the letter as a parameter"""
 
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
     import requests
     import sys
 
@@ -12,8 +12,8 @@ http://0.0.0.0:5000/search_user with the letter as a parameter"""
     try:
         dic = r.json()
         if dic == {}:
-        print('No result')
-    else:
-        print("[{}] {}".format(dic.get('id'), dic.get('name')))
+            print('No result')
+        else:
+            print("[{}] {}".format(dic.get('id'), dic.get('name')))
     except ValueError:
         print('Not a valid JSON')

@@ -25,8 +25,7 @@ class Rectangle:
     def __repr__(self):
         return f"Rectangle({self.__width},{self.__height})"
 
-    def __del__(self):
-        """Called when del is detected"""
+    def __del__(self): """Called when del is detected"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
